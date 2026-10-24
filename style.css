@@ -314,24 +314,134 @@ button {
 }
 
 /* =========================================================
-   FULL-COVER SHOWREEL CARD WITH OVERLAY LABEL
+   HERO SECTION & SHOWREEL CARD (EMPIRE STARTS HERE)
 ========================================================= */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 153px);
+    background: var(--black);
+    color: var(--white);
+    position: relative;
+}
 
-.hero-showreel {
+.hero-content {
     position: relative;
     z-index: 2;
+    padding: clamp(40px, 8vw, 100px) clamp(30px, 5vw, 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(17,17,17,0.95) 0%, rgba(17,17,17,0.7) 100%);
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.hero-small-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-description {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #bbb7af;
+    max-width: 480px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gold-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.gold-button:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+}
+
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background: transparent;
+    color: var(--white);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* SHOWREEL CARD COVER FIX */
+.hero-showreel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    background: var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #111111;
-    overflow: hidden;
-    padding: 0;
 }
 
-.hero-showreel video,
-.hero-showreel img {
+.hero-showreel img,
+.hero-showreel video {
     position: absolute;
     top: 0;
     left: 0;
@@ -340,141 +450,149 @@ button {
     object-fit: cover;
     object-position: center;
     display: block;
-    z-index: 1;
-}
-
-.hero-showreel::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(17, 17, 17, 0.85) 0%,
-        rgba(17, 17, 17, 0.2) 40%,
-        transparent 100%
-    );
-    z-index: 2;
-    pointer-events: none;
 }
 
 .showreel-label {
     position: absolute;
-    left: 35px;
-    bottom: 35px;
+    left: 30px;
+    bottom: 30px;
     z-index: 3;
     display: flex;
     flex-direction: column;
-    color: #ffffff;
-    background: rgba(17, 17, 17, 0.75);
+    background: rgba(17, 17, 17, 0.82);
     padding: 12px 18px;
+    border-left: 3px solid var(--gold);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border-left: 3px solid var(--gold, #c89a25);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .showreel-label span {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--white);
 }
 
 .showreel-label small {
-    margin-top: 4px;
-    color: var(--gold-light, #dfbb63);
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-top: 2px;
 }
 
 /* =========================================================
-   COLLECTION HERO & GALLERY GRID STYLES
+   COLLECTION INTRO & GRID (01 / COLLECTION COVER FIX)
 ========================================================= */
-
-.collection-page-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.collection-intro {
+    padding: 90px 20px 50px;
     text-align: center;
-    padding: 80px 20px 60px;
-    background: #e9e2d7;
+    background: var(--cream);
 }
 
-.collection-page-hero > div {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.collection-page-hero .eyebrow {
-    font-size: 10px;
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.25em;
-    color: #c89a25;
-    margin-bottom: 15px;
+    color: var(--gold);
     text-transform: uppercase;
-}
-
-.collection-page-hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(38px, 6vw, 70px);
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: #111111;
     margin-bottom: 20px;
 }
 
-.collection-page-hero p {
+.section-label span {
+    width: 25px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.collection-intro h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.collection-intro h2 p {
+    display: inline;
+    font-size: 0.5em;
+    font-style: italic;
+    font-family: var(--serif);
+    color: var(--grey);
+}
+
+.collection-intro h2 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.collection-intro > p {
     font-size: 13px;
-    line-height: 1.8;
-    color: #55514b;
+    color: var(--grey);
+    max-width: 550px;
     margin: 0 auto;
-    max-width: 580px;
 }
 
-.master-collections {
-    max-width: 1300px;
+.collection-grid {
+    max-width: 1350px;
     margin: 0 auto;
-    padding: 60px 25px 100px;
-}
-
-.collection-gallery {
+    padding: 30px 25px 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-    align-items: stretch;
 }
 
-.collection-gallery-card {
+.fashion-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: #111111;
-    border: 1px solid rgba(17, 17, 17, 0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: var(--white);
+    border: 1px solid var(--border);
     overflow: hidden;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.collection-gallery-card:hover {
+.fashion-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
+.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-wide {
+    grid-column: span 2;
+}
+
+/* 01 / COLLECTION & GALLERY CARD FULL COVER FIX */
+.fashion-image,
 .gallery-image {
     width: 100%;
     height: 100%;
-    min-height: 480px;
+    min-height: 380px;
     aspect-ratio: 3 / 4;
-    overflow: hidden;
-    background: #f0eae1;
     position: relative;
+    overflow: hidden;
+    background: var(--cream-dark);
 }
 
+.card-large .fashion-image {
+    min-height: 580px;
+    height: 100%;
+}
+
+.fashion-image img,
 .gallery-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -483,49 +601,91 @@ button {
     transition: transform 0.6s ease;
 }
 
+.fashion-card:hover .fashion-image img,
 .collection-gallery-card:hover .gallery-image img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
-.gallery-info {
-    padding: 18px 15px;
+.fashion-card-info {
+    padding: 22px 20px;
+    background: var(--white);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    width: 100%;
+    z-index: 2;
 }
 
-.gallery-info span {
-    display: block;
+.fashion-card-info span {
     font-size: 8px;
     font-weight: 700;
     letter-spacing: 0.2em;
-    color: #c89a25;
-    margin-bottom: 6px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-.gallery-info h3 {
+.fashion-card-info h3 {
     font-family: var(--serif);
     font-size: 22px;
     font-weight: 600;
-    color: #111111;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
-.gallery-info p {
+.fashion-card-info h3 a {
+    color: var(--black);
+    transition: color 0.25s ease;
+}
+
+.fashion-card-info h3 a:hover {
+    color: var(--gold);
+}
+
+.fashion-card-info p {
     font-size: 11px;
-    color: #77736c;
-    line-height: 1.5;
+    color: var(--grey);
+}
+
+/* =========================================================
+   BRAND STATEMENT & PHILOSOPHY
+========================================================= */
+.brand-statement {
+    background: var(--black);
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.statement-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.statement-content p {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.statement-content h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.statement-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
 }
 
 /* =========================================================
    FOOTER BASE
 ========================================================= */
-
 .site-footer {
     background: #111111 !important;
     color: #ffffff !important;
@@ -597,11 +757,15 @@ button {
 /* =========================================================
    MOBILE RESPONSIVE
 ========================================================= */
-
 @media (max-width: 1024px) {
-    .collection-gallery {
+    .collection-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .card-large,
+    .card-wide {
+        grid-column: span 2;
     }
 }
 
@@ -653,4 +817,7 @@ button {
         border: none !important;
     }
 
-    .mobile-utility
+    .mobile-utility-button span {
+        display: block !important;
+        width: 4px !important;
+        height: 4px !
