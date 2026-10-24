@@ -2,1103 +2,171 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Santos Empire Premium Tops Collection.">
+<title>Santos Empire | Tops</title>
 
-    <meta charset="UTF-8">
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Santos Empire JACKETS Collection."
-    >
-
-    <meta
-        name="theme-color"
-        content="#111111"
-    >
-
-    <title>
-        Santos Empire | JACKETS
-    </title>
-
-
-    <!-- GOOGLE FONTS -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- MAIN CSS -->
-
-    <link
-        rel="stylesheet"
-        href="../style.css"
-    >
-
-    <style>
-        /* =========================================================
-           PAGE-SPECIFIC COLLECTION STYLES
-        ========================================================= */
-
-        /* Site Header & Footer Dark Theme Overrides */
-        .site-header {
-            background: #111111 !important;
-            color: #ffffff !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        .site-header .social-links a,
-        .site-header .main-navigation > a,
-        .site-header .nav-dropdown > button,
-        .site-header .desktop-utilities .utility-item {
-            color: #ffffff !important;
-        }
-
-        .search-box {
-            border: 1px solid rgba(255, 255, 255, 0.25) !important;
-            background: rgba(0, 0, 0, 0.6) !important;
-        }
-
-        .search-box input {
-            color: #ffffff !important;
-        }
-
-        .search-box input::placeholder {
-            color: #aaa7a1 !important;
-        }
-
-        .search-icon {
-            border-color: #ffffff !important;
-        }
-
-        .search-icon::after {
-            background: #ffffff !important;
-        }
-
-        .main-navigation {
-            border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        .nav-dropdown-menu {
-            background: #111111 !important;
-            border: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        .nav-dropdown-menu a {
-            color: #ffffff !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        .site-footer {
-            background: #111111 !important;
-            color: #ffffff !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        .footer-column h4 {
-            color: #ffffff !important;
-        }
-
-        .footer-column a,
-        .footer-brand p,
-        .footer-bottom {
-            color: #aaa7a1 !important;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-        }
-
-        /* Centralized Collection Hero Title & Text */
-        .collection-page-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px 60px;
-            background: #e9e2d7;
-        }
-
-        .collection-page-hero > div {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .collection-page-hero .eyebrow {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            color: #c89a25;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .collection-page-hero h1 {
-            font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
-            font-size: clamp(38px, 6vw, 70px);
-            font-weight: 500;
-            line-height: 1;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            color: #111111;
-            margin-bottom: 20px;
-        }
-
-        .collection-page-hero p {
-            font-size: 13px;
-            line-height: 1.8;
-            color: #55514b;
-            margin: 0 auto;
-            max-width: 580px;
-        }
-
-        /* Horizontal Layout Grid for Cards */
-        .master-collections {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 60px 25px 100px;
-        }
-
-        .collection-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            align-items: stretch;
-        }
-
-        .collection-gallery-card {
-            display: flex;
-            flex-direction: column;
-            background: #ffffff;
-            border: 1px solid rgba(17, 17, 17, 0.08);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .collection-gallery-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-        }
-
-        .gallery-image {
-            width: 100%;
-            aspect-ratio: 3 / 4;
-            overflow: hidden;
-            background: #f0eae1;
-        }
-
-        .gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .collection-gallery-card:hover .gallery-image img {
-            transform: scale(1.05);
-        }
-
-        /* Centralized Card Description Text */
-        .gallery-info {
-            padding: 20px 15px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .gallery-info span {
-            display: block;
-            font-size: 8px;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            color: #c89a25;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
-        .gallery-info h3 {
-            font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
-            font-size: 22px;
-            font-weight: 600;
-            color: #111111;
-            margin-bottom: 4px;
-        }
-
-        .gallery-info p {
-            font-size: 11px;
-            color: #77736c;
-            line-height: 1.5;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 1024px) {
-            .collection-gallery {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .collection-gallery {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
-            .gallery-info {
-                padding: 12px 8px;
-            }
-
-            .gallery-info h3 {
-                font-size: 18px;
-            }
-
-            .gallery-info p {
-                font-size: 10px;
-            }
-
-            /* Mobile Menu Button Transparent Fix */
-            .mobile-menu-button,
-            .mobile-utility-button {
-                background: transparent !important;
-                border: none !important;
-                box-shadow: none !important;
-                padding: 0 !important;
-            }
-
-            .mobile-menu-button span,
-            .mobile-utility-button span {
-                background-color: #ffffff !important;
-            }
-
-            .mobile-navigation,
-            .mobile-quick-navigation,
-            .mobile-search,
-            .mobile-utility-menu,
-            .mobile-collection-list {
-                background: #111111 !important;
-                border-color: rgba(255, 255, 255, 0.14) !important;
-            }
-
-            .mobile-quick-navigation > a,
-            .mobile-collection-dropdown > summary,
-            .mobile-collection-list a,
-            .mobile-utility-menu a,
-            .mobile-menu-section a {
-                color: #ffffff !important;
-            }
-        }
-    </style>
-
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="../style.css">
 </head>
-
 
 <body class="collection-page">
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
+<!-- HEADER -->
 <header class="site-header">
-
-
     <div class="header-main">
-
-
-        <!-- HAMBURGER -->
-
-        <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            type="button"
-            aria-label="Open menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+        <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
         </button>
 
-
-        <!-- LOGO -->
-
-        <a
-            href="../index.html"
-            class="brand"
-            aria-label="Santos Empire Home"
-        >
-
-            <img
-                src="../logo.jpg"
-                alt="Santos Empire"
-                class="brand-logo"
-            >
-
-            <span class="brand-tagline">
-                Empire Starts Here...
-            </span>
-
+        <a href="../index.html" class="brand" aria-label="Santos Empire Home">
+            <img src="../logo.jpg" alt="Santos Empire" class="brand-logo">
+            <span class="brand-tagline">Empire Starts Here...</span>
         </a>
-
-
-        <!-- SOCIAL + SEARCH -->
 
         <div class="header-middle">
-
-
             <div class="social-links">
-
-                <a href="https://www.instagram.com/sultansantos7" target="_blank" aria-label="Instagram">
-                    Instagram
-                </a>
-
-                <a href="https://www.facebook.com/sultansantos7" target="_blank" aria-label="Facebook">
-                    Facebook
-                </a>
-
-                <a href="https://www.tiktok.com/@sultan_santos09?_r=1&_t=ZS-9ARhkvFARPO" target="_blank" aria-label="TikTok">
-                    TikTok
-                </a>
-
-                <a href="https://x.com/sultansantos7" target="_blank" aria-label="X">
-                    X
-                </a>
-
+                <a href="https://www.instagram.com/sultansantos7" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/sultansantos7" target="_blank">Facebook</a>
+                <a href="https://www.tiktok.com/@sultan_santos09?_r=1&_t=ZS-9ARhkvFARPO" target="_blank">TikTok</a>
+                <a href="https://x.com/sultansantos7" target="_blank">X</a>
             </div>
-
 
             <div class="search-box">
-
-                <input
-                    type="search"
-                    id="searchInput"
-                    placeholder="Search Santos Empire"
-                    autocomplete="off"
-                    aria-label="Search Santos Empire"
-                >
-
-                <button
-                    id="searchButton"
-                    type="button"
-                    aria-label="Search"
-                >
-
-                    <span class="search-icon"></span>
-
-                </button>
-
+                <input type="search" id="searchInput" placeholder="Search Santos Empire" autocomplete="off">
+                <button id="searchButton" type="button"><span class="search-icon"></span></button>
             </div>
-
-
         </div>
-
-
-        <!-- DESKTOP UTILITIES -->
 
         <div class="desktop-utilities">
-
-            <a
-                href="#"
-                class="utility-item"
-                title="Recently Viewed"
-                aria-label="Recently Viewed"
-            >
-
-                <span class="utility-icon">
-                    ↶
-                </span>
-
-            </a>
-
-
-            <a
-                href="#"
-                class="utility-item"
-                title="My Account"
-                aria-label="My Account"
-            >
-
-                <span class="utility-icon">
-                    ○
-                </span>
-
-            </a>
-
-
-            <a
-                href="#"
-                class="utility-item"
-                title="Wishlist"
-                aria-label="Wishlist"
-            >
-
-                <span class="utility-icon">
-                    ♡
-                </span>
-
-            </a>
-
-
-            <a
-                href="#"
-                class="utility-item"
-                title="Shopping Bag"
-                aria-label="Shopping Bag"
-            >
-
-                <span class="utility-icon">
-                    ♧
-                </span>
-
-            </a>
-
+            <a href="#" class="utility-item"><span class="utility-icon">↶</span></a>
+            <a href="#" class="utility-item"><span class="utility-icon">○</span></a>
+            <a href="#" class="utility-item"><span class="utility-icon">♡</span></a>
+            <a href="#" class="utility-item"><span class="utility-icon">♧</span></a>
         </div>
 
-
-        <!-- MOBILE THREE DOT -->
-
-        <button
-            class="mobile-utility-button"
-            id="mobileUtilityButton"
-            type="button"
-            aria-label="More options"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+        <button class="mobile-utility-button" id="mobileUtilityButton" type="button">
+            <span></span><span></span><span></span>
         </button>
-
-
     </div>
-
-
-    <!-- MOBILE QUICK NAVIGATION -->
 
     <div class="mobile-quick-navigation">
-
-
-        <a href="../index.html">
-            HOME
-        </a>
-
-
+        <a href="../index.html">HOME</a>
         <details class="mobile-collection-dropdown">
-
-            <summary>
-
-                ALL COLLECTIONS
-
-                <span>+</span>
-
-            </summary>
-
-
+            <summary>ALL COLLECTIONS <span>+</span></summary>
             <div class="mobile-collection-list">
-
-                <a href="../New_in/index.html">
-                    NEW IN
-                </a>
-
-                <a href="../Streetwears/index.html">
-                    STREETWEARS
-                </a>
-
-                <a href="../Senators%20with%20Agbada/index.html">
-                    AGBADA DESIGNS
-                </a>
-                
-                <a href="../KAFTAN SENATOR/index.html">KAFTAN SENATOR DESIGNS</a>
-
-                <a href="../JACKETS/index.html">
-                    JACKETS
-                </a>
-
-                <a href="../TOPS/index.html">
-                    TOPS
-                </a>
-
-                <a href="../PANTS/index.html">
-                    PANTS
-                </a>
-
-                <a href="../FOOTWEAR/index.html">
-                    FOOTWEAR
-                </a>
-
+                <a href="../New_in/index.html">NEW IN</a>
+                <a href="../Streetwears/index.html">STREETWEARS</a>
+                <a href="../Senators%20with%20Agbada/index.html">AGBADA DESIGNS</a>
+                <a href="../KAFTAN%20SENATOR/index.html">KAFTAN SENATOR DESIGNS</a>
+                <a href="../JACKETS/index.html">JACKETS</a>
+                <a href="../TOPS/index.html">TOPS</a>
+                <a href="../PANTS/index.html">PANTS</a>
+                <a href="../FOOTWEAR/index.html">FOOTWEAR</a>
             </div>
-
         </details>
-
-        <a href="../SHOWREEL/index.html"></a>
-
-        <a href="../CONTACT/index.html">
-            CONTACT
-        </a>
-
-
+        <a href="../CONTACT/index.html">CONTACT</a>
     </div>
-
-
-    <!-- MOBILE SEARCH -->
 
     <div class="mobile-search">
-
         <div class="search-box">
-
-            <input
-                type="search"
-                id="mobileSearchInput"
-                placeholder="Search Santos Empire"
-                autocomplete="off"
-                aria-label="Search Santos Empire"
-            >
-
-            <button
-                id="mobileSearchButton"
-                type="button"
-                aria-label="Search"
-            >
-
-                <span class="search-icon"></span>
-
-            </button>
-
+            <input type="search" id="mobileSearchInput" placeholder="Search Santos Empire">
+            <button id="mobileSearchButton" type="button"><span class="search-icon"></span></button>
         </div>
-
     </div>
 
-
-    <!-- MOBILE THREE-DOT MENU -->
-
-    <div
-        class="mobile-utility-menu"
-        id="mobileUtilityMenu"
-    >
-
-        <a href="#">
-            <span>↶</span>
-            Recently Viewed
-        </a>
-
-        <a href="#">
-            <span>○</span>
-            My Account
-        </a>
-
-        <a href="#">
-            <span>♡</span>
-            Wishlist
-        </a>
-
-        <a href="#">
-            <span>♧</span>
-            Shopping Bag
-        </a>
-
+    <div class="mobile-utility-menu" id="mobileUtilityMenu">
+        <a href="#"><span>↶</span> Recently Viewed</a>
+        <a href="#"><span>○</span> My Account</a>
+        <a href="#"><span>♡</span> Wishlist</a>
+        <a href="#"><span>♧</span> Shopping Bag</a>
     </div>
 
-
-    <!-- DESKTOP NAVIGATION -->
-
-    <nav
-        class="main-navigation"
-        aria-label="Main navigation"
-    >
-
-
-        <a href="../index.html">
-            HOME
-        </a>
-
-
+    <nav class="main-navigation">
+        <a href="../index.html">HOME</a>
         <div class="nav-dropdown">
-
-            <button type="button">
-
-                ALL COLLECTIONS
-
-                <span>⌄</span>
-
-            </button>
-
-
+            <button type="button">ALL COLLECTIONS <span>⌄</span></button>
             <div class="nav-dropdown-menu">
-
-                <a href="../New_in/index.html">
-                    NEW IN
-                </a>
-
-                <a href="../Streetwears/index.html">
-                    STREETWEARS
-                </a>
-
-                <a href="../Senators%20with%20Agbada/index.html">
-                    AGBADA DESIGNS
-                </a>
-
-                <a href="/KAFTAN SENATOR/index.html">KAFTAN SENATOR DESIGNS</a>
-
-                <a href="../JACKETS/index.html" class="active">
-                    JACKETS
-                </a>
-
-                <a href="../TOPS/index.html">
-                    TOPS
-                </a>
-
-                <a href="../PANTS/index.html">
-                    PANTS
-                </a>
-
-                <a href="../FOOTWEAR/index.html">
-                    FOOTWEAR
-                </a>
-
+                <a href="../New_in/index.html">NEW IN</a>
+                <a href="../Streetwears/index.html">STREETWEARS</a>
+                <a href="../Senators%20with%20Agbada/index.html">AGBADA DESIGNS</a>
+                <a href="../KAFTAN%20SENATOR/index.html">KAFTAN SENATOR DESIGNS</a>
+                <a href="../JACKETS/index.html">JACKETS</a>
+                <a href="../TOPS/index.html" class="active">TOPS</a>
+                <a href="../PANTS/index.html">PANTS</a>
+                <a href="../FOOTWEAR/index.html">FOOTWEAR</a>
             </div>
-
         </div>
-
-
-        <a href="../SHOWREEL/index.html">
-            SHOWREEL
-        </a>
-
-
-        <a href="../CONTACT/index.html">
-            CONTACT
-        </a>
-
-
+        <a href="../SHOWREEL/index.html">SHOWREEL</a>
+        <a href="../CONTACT/index.html">CONTACT</a>
     </nav>
-
-
 </header>
 
-
-<!-- =====================================================
-     HAMBURGER MENU
-===================================================== -->
-
-<div
-    class="mobile-navigation"
-    id="mobileNavigation"
->
-
-
-    <div class="mobile-navigation-header">
-
-        <button
-            id="closeMobileNavigation"
-            type="button"
-            aria-label="Close menu"
-        >
-            ×
-        </button>
-
-    </div>
-
-
-    <!-- SOCIAL MEDIA -->
-
-    <div class="mobile-menu-section">
-
-        <small>
-            CONNECT
-        </small>
-
-        <a href="https://www.instagram.com/sultansantos7">
-            Instagram
-        </a>
-
-        <a href="https://www.facebook.com/sultansantos7">
-            Facebook
-        </a>
-
-        <a href="https://www.tiktok.com/@sultan_santos09?_r=1&_t=ZS-9ARhkvFARPO">
-            TikTok
-        </a>
-
-        <a href="https://x.com/sultansantos7">
-            X
-        </a>
-
-    </div>
-
-
-    <!-- POLICIES -->
-
-    <div class="mobile-menu-section">
-
-        <small>
-            INFORMATION
-        </small>
-
-        <a href="#">
-            Warranty
-        </a>
-
-        <a href="#">
-            Terms of Use
-        </a>
-
-        <a href="#">
-            Privacy Policy
-        </a>
-
-        <a href="#">
-            Cookie Settings
-        </a>
-
-    </div>
-
-
-</div>
-
-
-<!-- =====================================================
-     COLLECTION HERO
-===================================================== -->
-
+<!-- HERO -->
 <section class="collection-page-hero">
-
     <div>
-
-        <p class="eyebrow">
-            SANTOS EMPIRE
-        </p>
-
-
-        <h1>
-            TOPS COLLECTION
-        </h1>
-
-
-        <p>
-
-            Discover the latest Santos Empire
-            tops collection, carefully selected for the modern wardrobe.
-
-        </p>
-
+        <p class="eyebrow">SANTOS EMPIRE</p>
+        <h1>TOPS</h1>
+        <p>Discover our range of handcrafted shirts, tunics, and statement tops.</p>
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     COLLECTION GRID
-===================================================== -->
-
+<!-- GALLERY -->
 <main class="master-collections">
-
-
     <div class="collection-gallery">
-
-
-        <!-- IMAGE 01 -->
-
         <article class="collection-gallery-card">
-
-            <div class="gallery-image">
-
-                <img
-                    src="images/Top.jpg"
-                    alt="Santos Empire JACKET 01"
-                    loading="lazy"
-                >
-
-            </div>
-
-
+            <div class="gallery-image"><img src="images/TOP01.JPG" alt="Top 01" loading="lazy"></div>
             <div class="gallery-info">
-
-                <span>
-                    TOP / 01
-                </span>
-
-                <h3>
-                    Santos Empire
-                </h3>
-
-                <p>
-                    Signature collection piece.
-                </p>
-
+                <span>TOPS / 01</span>
+                <h3>Santos Empire</h3>
+                <p>Signature collection piece.</p>
             </div>
-
         </article>
-
-
-        <!-- IMAGE 02 -->
-
         <article class="collection-gallery-card">
-
-            <div class="gallery-image">
-
-                <img
-                    src="images/TOP1.JPG"
-                    alt="Santos Empire TOP 02"
-                    loading="lazy"
-                >
-
-            </div>
-
-
+            <div class="gallery-image"><img src="images/TOP02.JPG" alt="Top 02" loading="lazy"></div>
             <div class="gallery-info">
-
-                <span>
-                    TOP / 02
-                </span>
-
-                <h3>
-                    Santos Empire
-                </h3>
-
-                <p>
-                    Signature collection piece.
-                </p>
-
+                <span>TOPS / 02</span>
+                <h3>Santos Empire</h3>
+                <p>Signature collection piece.</p>
             </div>
-
         </article>
-
-
-        <!-- IMAGE 03 -->
-
-        <article class="collection-gallery-card">
-
-            <div class="gallery-image">
-
-                <img
-                    src="images/TOP2.JPG"
-                    alt="Santos Empire TOP 03"
-                    loading="lazy"
-                >
-
-            </div>
-
-
-            <div class="gallery-info">
-
-                <span>
-                    TOP / 03
-                </span>
-
-                <h3>
-                    Santos Empire
-                </h3>
-
-                <p>
-                    Signature collection piece.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- IMAGE 04 -->
-
-        <article class="collection-gallery-card">
-
-            <div class="gallery-image">
-
-                <img
-                    src="images/TOPS01.JPG"
-                    alt="Santos Empire TOP 04"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="gallery-info">
-
-                <span>
-                    TOP / 04
-                </span>
-
-                <h3>
-                    Santos Empire
-                </h3>
-
-                <p>
-                    Signature collection piece.
-                </p>
-
-            </div>
-
-        </article>
-
     </div>
-
-
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<!-- FOOTER -->
 <footer class="site-footer">
-
-
     <div class="footer-main">
-
-
-        <!-- FOOTER BRAND -->
-
         <div class="footer-brand">
-
-            <img
-                src="../logo.jpg"
-                alt="Santos Empire"
-                class="footer-logo-image"
-            >
-
-            <span class="brand-tagline">
-                Empire Starts Here...
-            </span>
-
-            <p>
-                Fashion. Identity. Expression.
-            </p>
-
-            <p class="footer-signature">
-                GOA Digital Innovations
-            </p>
-
+            <img src="../logo.jpg" alt="Santos Empire" class="footer-logo-image">
+            <p>Fashion. Identity. Expression.</p>
         </div>
-
-
-        <!-- SHOP -->
-
         <div class="footer-column">
-
-            <h4>
-                SHOP
-            </h4>
-
-            <a href="../New_in/index.html">
-                New In
-            </a>
-
-            <a href="../Streetwears/index.html">
-                Streetwears
-            </a>
-
-            <a href="../JACKETS/index.html">
-                Jackets
-            </a>
-
-            <a href="../TOPS/index.html">
-                Tops
-            </a>
-
+            <h4>SHOP</h4>
+            <a href="../New_in/index.html">New In</a>
+            <a href="../Streetwears/index.html">Streetwears</a>
+            <a href="../TOPS/index.html">Tops</a>
         </div>
-
-
-        <!-- COLLECTIONS -->
-
         <div class="footer-column">
-
-            <h4>
-                COLLECTIONS
-            </h4>
-
-            <a href="../PANTS/index.html">
-                Pants
-            </a>
-
-            <a href="../FOOTWEAR/index.html">
-                Footwear
-            </a>
-
-            <a href="../SHOWREEL/index.html">
-                Showreel
-            </a>
-
+            <h4>COLLECTIONS</h4>
+            <a href="../PANTS/index.html">Pants</a>
+            <a href="../FOOTWEAR/index.html">Footwear</a>
         </div>
-
-
-        <!-- INFORMATION -->
-
         <div class="footer-column">
-
-            <h4>
-                INFORMATION
-            </h4>
-
-            <a href="#">
-                Warranty
-            </a>
-
-            <a href="#">
-                Terms of Use
-            </a>
-
-            <a href="#">
-                Privacy Policy
-            </a>
-
-            <a href="../CONTACT/index.html">
-                Contact
-            </a>
-
+            <h4>INFORMATION</h4>
+            <a href="../CONTACT/index.html">Contact</a>
         </div>
-
-
     </div>
-
-
     <div class="footer-bottom">
-
-        <span>
-
-            ©
-            <span id="year"></span>
-            Santos Empire.
-            All rights reserved.
-
-        </span>
-
-
-        <span>
-            Fashion • Design • Identity
-        </span>
-
+        <span>© <span id="year"></span> Santos Empire. All rights reserved.</span>
     </div>
-
-
 </footer>
 
-
 <script src="../script.js"></script>
-
 </body>
-
 </html>
