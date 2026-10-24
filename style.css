@@ -330,7 +330,6 @@ button {
     padding: 0;
 }
 
-/* Forces image or video to cover 100% of the card area */
 .hero-showreel video,
 .hero-showreel img {
     position: absolute;
@@ -344,7 +343,6 @@ button {
     z-index: 1;
 }
 
-/* Dark gradient overlay behind label to ensure high readability */
 .hero-showreel::after {
     content: "";
     position: absolute;
@@ -359,7 +357,6 @@ button {
     pointer-events: none;
 }
 
-/* Floating overlay label on top of full-cover media */
 .showreel-label {
     position: absolute;
     left: 35px;
@@ -656,102 +653,4 @@ button {
         border: none !important;
     }
 
-    .mobile-utility-button span {
-        display: block !important;
-        width: 4px !important;
-        height: 4px !important;
-        border-radius: 50% !important;
-        background-color: #ffffff !important;
-    }
-
-    .header-middle,
-    .desktop-utilities,
-    .main-navigation {
-        display: none !important;
-    }
-
-    .mobile-quick-navigation {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-around !important;
-        min-height: 42px;
-        padding: 0 10px;
-        background: #111111 !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-    }
-
-    .mobile-quick-navigation > a,
-    .mobile-collection-dropdown > summary {
-        color: #ffffff !important;
-        font-size: 8px !important;
-        font-weight: 700 !important;
-        letter-spacing: .1em !important;
-        text-transform: uppercase;
-        padding: 8px 4px;
-    }
-
-    .mobile-collection-list {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(240px, 85vw);
-        background: #111111 !important;
-        border: 1px solid rgba(255, 255, 255, 0.14) !important;
-        z-index: 1200;
-        padding: 6px 0;
-    }
-
-    .mobile-collection-list a {
-        display: block !important;
-        padding: 10px 16px !important;
-        color: #ffffff !important;
-        font-size: 8px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    }
-
-    .mobile-search {
-        display: block !important;
-        padding: 8px 12px;
-        background: #111111 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
-    }
-
-    .hero-showreel {
-        min-height: 75vh;
-    }
-
-    .showreel-label {
-        left: 20px;
-        bottom: 25px;
-        padding: 10px 14px;
-    }
-
-    .showreel-label span {
-        font-size: 9px;
-    }
-
-    .showreel-label small {
-        font-size: 8px;
-    }
-
-    .gallery-image {
-        min-height: 320px;
-    }
-
-    .collection-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px 25px;
-        padding: 55px 22px 40px;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
-}
+    .mobile-utility
